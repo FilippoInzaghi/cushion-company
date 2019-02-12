@@ -1,0 +1,9 @@
+{
+  "name": "cushion-company",
+  "version": "1.0.0",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "normalize.css": "^8.0.1",
+    "react-router-dom": "^4.3.1"
+  }
+}
