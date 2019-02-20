@@ -16,6 +16,13 @@
   &--gutters-large > div{
     padding-right: 100px;
   }
+  &--gutters-small{
+    margin-right: -30px;
+  }
+  &--gutters-small > div{
+    padding-right: 30px;
+  }
+
 
   &__b-margin-until-medium{
     margin-bottom: 1rem;
@@ -40,11 +47,23 @@
     @mixin atMedium {
       width: 33.333%
     }
-
-    @mixin atLarge {
-      width: 40%
     }
-  }
+
+    &__medium-4--testimonials{
+      @mixin atMedium {
+        float: left;
+        width: 33.333%
+      }
+    }
+    &__large-4--testimonials{
+      @mixin atLarge {
+        float: left;
+        width: 33.333%
+      }
+    }
+
+
+
 
   &__medium-6{
     @mixin atSmall{
@@ -62,6 +81,32 @@
     @mixin atLarge {
       width: 60%
     }
+  }
+
+  /* Begin Eqaul Height Rules */
+
+  &--equal-height-at-medium{
+    @mixin atMedium{
+      display: flex;
+    }
+
+    & > div {
+      float: none;
+      display: flex;
+    }
+ 
+  }
+
+  &--equal-height-at-large{
+    @mixin atLarge{
+      display: flex;
+    }
+
+    & > div {
+      float: none;
+      display: flex;
+    }
+ 
   }
  
 
