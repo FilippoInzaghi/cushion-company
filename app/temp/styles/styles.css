@@ -531,3 +531,15 @@ a{
   font-weight: 200
 }
  }
+.site-header{
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  background-color: rgba(47,85,114, .3);
+}
+.site-header__btn-container{
+   float: right;
+  }
+.site-header li{
+   list-style: none;
+  }

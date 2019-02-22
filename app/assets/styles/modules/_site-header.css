@@ -1,0 +1,13 @@
+.site-header{
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  background-color: rgba(#2f5572, .3);
+  &__btn-container{
+   float: right;
+  }
+
+  li{
+   list-style: none;
+  }
+}
