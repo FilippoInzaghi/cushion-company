@@ -1,13 +1,88 @@
-.site-header{
+.site-header {
   position: absolute;
   width: 100%;
   z-index: 1;
-  background-color: rgba(#2f5572, .3);
-  &__btn-container{
-   float: right;
+  padding: 1rem 0;
+  transition: background-color .3s ease-out;
+
+  &--is-expanded {
+    background-color: rgba(#2f5572, .55);
   }
 
-  li{
-   list-style: none;
+  @mixin atMedium {
+    background-color: rgba(#2f5572, .3);
   }
+
+  &__btn-container {
+
+    @mixin atMedium {
+      float: right;
+    }
+
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(.8);
+    transform-origin: 50% 0;
+    background-color: var(--mainBlue);
+    padding: 25px 36px;
+
+    @mixin atMedium {
+      left: auto;
+      transform: translateX(0);
+    }
+  }
+
+  &__logo__graphic {
+    text-indent: -9999px;
+  }
+
+  &__menu-icon {
+    cursor: pointer;
+    display: block;
+    width: 20px;
+    height: 20px;
+    
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 3;
+
+    @mixin atMedium {
+      display: none;
+    }
+
+  }
+
+
+  &__menu-content {
+    opacity: 0;
+    transform: scale(1.2);
+    transition: all .3s ease-out;
+    z-index: -2;
+    position: relative;
+    padding-top: 100px;
+    text-align: center;
+
+    @mixin atMedium {
+      opacity: 1;
+      z-index: 1;
+      padding-top: 0;
+      transform: scale(1);
+    }
+
+    &--is-visible {
+      transform: scale(1);
+      opacity: 1;
+      z-index: 1;
+
+      /* background-color: rgba(#2f5572, .5); */
+    }
+  }
+
+
+
 }
