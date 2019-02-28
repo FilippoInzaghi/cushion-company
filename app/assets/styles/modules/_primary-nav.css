@@ -51,6 +51,11 @@
    font-size: 1rem;
    padding: .75rem 0;
    background-color: transparent; 
+
+   &.orange-highlight{
+    color: var(--mainOrange);
   }
  }
+}
+
 }

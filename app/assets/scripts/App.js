@@ -8,11 +8,9 @@ class MobileMenu {
   }
   events() {
     this.menuIcon.click(() => this.toggleTheMenu());
-    console.log(this)
   }
   toggleTheMenu() {
     this.menuContent.toggleClass("site-header__menu-content--is-visible");
-    console.log(this);
     this.siteHeader.toggleClass("site-header--is-expanded");
     this.menuIcon.toggleClass('site-header__menu-icon--close-x')
   }
@@ -54,7 +52,7 @@ class RevealOnScroll {
         const scrollTop = window.scrollY;
         const offsetTop = element.offsetTop;
         const height = element.offsetHeight;
-        console.log(scrollTop,  offsetTop - height);
+        // console.log(scrollTop,  offsetTop - height);
         if (scrollTop >= offsetTop - height / that.animationDelay) {
           element.classList.add('reveal-item--is-visible');
         } else if (scrollTop < offsetTop - height / that.animationDelay) {
@@ -62,11 +60,87 @@ class RevealOnScroll {
         }
       })
     })
-
   }
-
-
 }
 
 new RevealOnScroll($('.feature-item'), 1);
-new RevealOnScroll($('.testimonial'), 1)
+new RevealOnScroll($('.testimonial'), 1);
+
+//StickyHeader//
+
+class StickyHeader {
+  constructor() {
+    this.siteHeader = $('.site-header');
+    this.siteHeaderChangeColor();
+    this.pageSections = $('.page-section');
+    this.headerLinks = $('nav a');
+    this.scrollToSection();
+  }
+  siteHeaderChangeColor() {
+    const that = this;
+    $(document).scroll(function () {
+      const scrollTop = $(document).scrollTop();
+      const height = $(that.siteHeader).outerHeight();
+      if (scrollTop > 1.5 * height) {
+        $(that.siteHeader).addClass('site-header--sticky')
+      } else {
+        $(that.siteHeader).removeClass('site-header--sticky')
+      }
+    })
+  }
+
+  scrollToSection() {
+    const that = this;
+    this.pageSections.each(function () {
+      const currentPageSection = this;
+      const idOfNavigation = currentPageSection.getAttribute('data-matching-link');
+      $(idOfNavigation).click(function () {
+        $(that.headerLinks).each(function () {
+          $(this).removeClass('orange-highlight');
+        })
+        $(idOfNavigation).addClass('orange-highlight');
+        $('html, body').animate({
+          scrollTop: $(currentPageSection).offset().top
+        }, 500);
+      // console.log('wywołane klikiem', $(window).scrollTop(), $(currentPageSection).offset().top)
+      });
+    });
+  }
+}
+
+new StickyHeader();
+
+
+//Zmiana koloru przycisków menu przy scrollowaniu //
+
+class OrangeButtonAtScroll {
+  constructor() {
+    this.pageSections = $('.page-section');
+    this.headerLinks = $('nav a');
+    this.addOrangeColorToButton();
+  }
+
+  addOrangeColorToButton() {
+    const that = this;
+    $(window).scroll(function () {
+      $(that.headerLinks).each(function () {
+        $(this).removeClass('orange-highlight');
+      });
+      const windowScroll = $(window).scrollTop();
+      $(that.pageSections).each(function () {
+        const start = $(this).offset().top;
+        const end = start + $(this).outerHeight();
+        // console.log(windowScroll, start, end);
+
+        if (windowScroll >= Math.floor(start) && windowScroll < Math.floor(end)) {
+          const idOfNavigation = this.getAttribute('data-matching-link');
+          $(idOfNavigation).addClass('orange-highlight');
+          // console.log(idOfNavigation);
+        }
+      })
+    })
+  }
+}
+
+
+new OrangeButtonAtScroll();
