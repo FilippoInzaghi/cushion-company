@@ -8,10 +8,8 @@
   <meta name="keywords" content="Travel planning, travel bundles, travel escapes, cushions, manufacturer">
   <meta name="description" content="Your clarity. One trip away. We create soul restoring journeys that inspire you to be you.">
   <link rel="stylesheet" href="./temp/styles/styles.css">
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -22,24 +20,24 @@
       </div>
 
       <div class="site-header__menu-icon">
-        <div class="site-header__menu-icon__middle"></div>        
+        <div class="site-header__menu-icon__middle"></div>
       </div>
 
       <div class="site-header__menu-content">
-          <div class="site-header__btn-container">
-              <a href="#" class="btn">Get in Touch</a>
-          </div>
-          <nav class="primary-nav primary-nav--pull-right">
-            <ul>
-              <li><a href="#our-beginning" id='our-beginning-link'>Our Beginning</a></li>
-              <li><a href="#features" id='features-link'>Features</a></li>
-              <li><a href="#testimonials" id='testimonials-link'>Testimonials</a></li>
-            </ul>
-          </nav>
+        <div class="site-header__btn-container">
+          <a href="#" class="btn open-modal">Get in Touch</a>
+        </div>
+        <nav class="primary-nav primary-nav--pull-right">
+          <ul>
+            <li><a href="#our-beginning" id='our-beginning-link'>Our Beginning</a></li>
+            <li><a href="#features" id='features-link'>Features</a></li>
+            <li><a href="#testimonials" id='testimonials-link'>Testimonials</a></li>
+          </ul>
+        </nav>
       </div>
 
-     
-    </div>   
+
+    </div>
   </header>
 
   <div class="large-hero">
@@ -55,7 +53,7 @@
         <h1 class="large-hero__title">Your clarity.</h1>
         <h2 class="large-hero__subtitle">One trip away.</h2>
         <p class="large-hero__description">We create soul restoring journeys that inspire you to be you.</p>
-        <p><a href="#" class="btn btn--orange btn--large">Get Started Today</a></p>
+        <p><a href="#" class="btn btn--orange btn--large open-modal">Get Started Today</a></p>
       </div>
     </div>
   </div>
@@ -123,7 +121,7 @@
       <div class="row  row--gutters-large generic-content-container">
         <div class="row__medium-6">
           <div class="feature-item">
-          <span class="icon icon--rain feature-item__icon"></span>
+            <span class="icon icon--rain feature-item__icon"></span>
             <h3 class="feature-item__title">We&rsquo;ll Watch the Weather</h3>
             <p>Download our app and we&rsquo;ll send you a notice if it&rsquo;s about to rain in the next 20 minutes
               around
@@ -170,56 +168,86 @@
 
   </div>
 
-  <div id="testimonials" class="page-section  page-section--no-b-padding-until-large page-section--testimonials" data-matching-link="#testimonials-link">
+  <div id="testimonials" class="page-section  page-section--no-b-padding-until-large page-section--testimonials"
+    data-matching-link="#testimonials-link">
     <div class="wrapper wrapper--no-padding-until-large">
-      
-      <h2 class="section-title section-title--blue"><span class="icon icon--comment section-title__icon"></span>Real <strong>Testimonials</strong></h2>
+
+      <h2 class="section-title section-title--blue"><span class="icon icon--comment section-title__icon"></span>Real
+        <strong>Testimonials</strong></h2>
 
       <div class="row row--gutters row--gutters-small row--equal-height-at-large ">
         <div class="row__large-4--testimonials generic-content-container">
           <div class="testimonial">
-              <img class='testimonial__icon' sizes='160px' srcset="assets/images/testimonial-jane.jpg 160w, assets/images/testimonial-jane-hi-dpi.jpg 320w">
-              <h3 class="testimonial__title">Jane Doe</h3>
-              <h4 class="testimonial__subtitle">9 Time Escaper</h4>
-              <p>&ldquo;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.&rdquo;</p>
+            <img class='testimonial__icon' sizes='160px' srcset="assets/images/testimonial-jane.jpg 160w, assets/images/testimonial-jane-hi-dpi.jpg 320w">
+            <h3 class="testimonial__title">Jane Doe</h3>
+            <h4 class="testimonial__subtitle">9 Time Escaper</h4>
+            <p>&ldquo;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+              laborum.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore
+              magna aliqua.&rdquo;</p>
           </div>
-       
+
         </div>
         <div class="row__large-4--testimonials">
 
-            <div class="testimonial generic-content-container">
+          <div class="testimonial generic-content-container">
             <img class='testimonial__icon' sizes='160px' srcset="assets/images/testimonial-john.jpg 160w, assets/images/testimonial-john-hi-dpi.jpg 320w">
             <h3 class='testimonial__title'>John Smith</h3>
             <h4 class="testimonial__subtitle">4 Time Escaper</h4>
-            <p>&ldquo;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <p>&ldquo;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+              laborum.
               Lorem ipsum dolor sit amet, consectetur.&rdquo;</p>
-            </div>
+          </div>
         </div>
         <div class="row__large-4--testimonials generic-content-container">
-            <div class="testimonial">
+          <div class="testimonial">
             <img class='testimonial__icon' sizes='160px' srcset="assets/images/testimonial-cat.jpg 160w, assets/images/testimonial-cat-hi-dpi.jpg 320w">
             <h3 class="testimonial__title">Cat McKitty</h3>
             <h4 class="testimonial__subtitle">6 Time Escaper</h4>
-            <p>&ldquo;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <p>&ldquo;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+              laborum.
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.&rdquo;</p>
-            </div>
+          </div>
         </div>
-      </div> 
+      </div>
     </div>
   </div>
 
   <footer class='site-footer'>
     <div class="wrapper">
-        <p><span class='site-footer__text'>Copyright &copy; 2016 Clear View Escapes. All rights reserved.</span> <a href="#" class='btn btn--orange'>Get in Touch</a></p>
+      <p><span class='site-footer__text'>Copyright &copy; 2016 Clear View Escapes. All rights reserved.</span> <a href="#"
+          class='btn btn--orange open-modal'>Get in Touch</a></p>
     </div>
-   
   </footer>
-<script type='module' src='./assets/scripts/App.js'></script>
+  <div class="modal">
+    <div class="modal__inner">
+      <h2 class="section-title section-title--blue section-title--less-margin"><span class="icon icon--mail section-title__icon"></span>Get
+        in
+        <strong>Touch</strong></h2>
+      <div class="wrapper wrapper--narrow">
+        <p class='modal__description'>We will have an online order system in place soon. Until then, connetct witch us
+          on
+          any of the platforms below!</p>
+      </div>
+      <div class="social-icons">
+        <a href="#" class="social-icons__icon"><span class='icon icon--facebook'></span></a>
+        <a href="#" class="social-icons__icon"><span class='icon icon--twitter'></span></a>
+        <a href="#" class="social-icons__icon"><span class='icon icon--instagram'></span></a>
+        <a href="#" class="social-icons__icon"><span class='icon icon--youtube'></span></a>
+      </div>
+    </div>
+
+    <div class="modal--close">X</div>
+  </div>
+  <script type='module' src='./assets/scripts/App.js'></script>
 
 </body>
+
 </html>

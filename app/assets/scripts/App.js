@@ -102,7 +102,7 @@ class StickyHeader {
         $('html, body').animate({
           scrollTop: $(currentPageSection).offset().top
         }, 500);
-      // console.log('wywołane klikiem', $(window).scrollTop(), $(currentPageSection).offset().top)
+        // console.log('wywołane klikiem', $(window).scrollTop(), $(currentPageSection).offset().top)
       });
     });
   }
@@ -144,3 +144,35 @@ class OrangeButtonAtScroll {
 
 
 new OrangeButtonAtScroll();
+
+//Modal//
+
+class Modal {
+  constructor() {
+    this.openModalButton = $('.open-modal');
+    this.closeModalButton = $('.modal--close')
+    this.modalToReveal = $('.modal');
+    this.events();
+  }
+
+  events() {
+    $(this.openModalButton).click(this.showModal.bind(this));
+    $(this.closeModalButton).click(() => this.hideModal());
+    $(window).keyup(this.hideModalOnEsc.bind(this));
+  }
+  showModal() {
+    $(this.modalToReveal).addClass('modal--is-visible');
+    return false;
+  }
+  hideModal() {
+    $(this.modalToReveal).removeClass('modal--is-visible');
+  }
+  hideModalOnEsc(e) {
+    console.log(e.keyCode);
+    if (e.which === 27) {
+      $(this.modalToReveal).removeClass('modal--is-visible');
+    }
+  }
+}
+
+new Modal();
