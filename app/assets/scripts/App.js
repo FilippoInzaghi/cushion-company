@@ -14,7 +14,7 @@ class MobileMenu {
     this.siteHeader.toggleClass("site-header--is-expanded");
     this.menuIcon.toggleClass('site-header__menu-icon--close-x')
   }
-}
+ }
 
 const test = new MobileMenu();
 
@@ -63,7 +63,7 @@ class RevealOnScroll {
   }
 }
 
-new RevealOnScroll($('.feature-item'), 1);
+new RevealOnScroll($('.feature-item'), .5);
 new RevealOnScroll($('.testimonial'), 1);
 
 //StickyHeader//
@@ -123,14 +123,14 @@ class OrangeButtonAtScroll {
   addOrangeColorToButton() {
     const that = this;
     $(window).scroll(function () {
-      $(that.headerLinks).each(function () {
+       $(that.headerLinks).each(function () {
         $(this).removeClass('orange-highlight');
       });
       const windowScroll = $(window).scrollTop();
       $(that.pageSections).each(function () {
         const start = $(this).offset().top;
         const end = start + $(this).outerHeight();
-        // console.log(windowScroll, start, end);
+        // console.log(startScrollPosition,windowScroll, start, end);
 
         if (windowScroll >= Math.floor(start) && windowScroll < Math.floor(end)) {
           const idOfNavigation = this.getAttribute('data-matching-link');
